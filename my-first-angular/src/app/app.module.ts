@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MyComponentComponent } from './my-component/my-component.component';
 import { LumaComponent } from './luma/luma.component';
 import { MartinhoComponent } from './martinho/martinho.component';
+import { OliveiraComponent } from './oliveira/oliveira.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { MartinhoComponent } from './martinho/martinho.component';
     MyComponentComponent,
     LumaComponent,
     MartinhoComponent,
+    OliveiraComponent,
   ],
   imports: [
     BrowserModule,
