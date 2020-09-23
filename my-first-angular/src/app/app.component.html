@@ -1,15 +1,6 @@
-<div class="mycomp">
-  <app-my-component></app-my-component>
-</div>  
+<router-outlet></router-outlet>
 
-<div class="mycomp">
-  <app-luma></app-luma>
-</div>
-
-<div class="mycomp">
-  <app-martinho></app-martinho>
-</div>
-
-<div class="mycomp">
-  <app-oliveira></app-oliveira>
-</div>
+<button (click)="navegar('')">Navegar home</button>
+<button (click)="navegar('luma')">Navegar luma</button>
+<button (click)="navegar('oliveira')">Navegar oliveira</button>
+<button (click)="navegar('martinho')">Navegar martinho</button>

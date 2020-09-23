@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LumaComponent implements OnInit {
 
+  meu_nome = "Luma Chen"
+
   constructor() { }
 
   ngOnInit(): void {
