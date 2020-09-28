@@ -1,3 +1,5 @@
 <h1>
-    {{meu_nome}}
+    {{myName}}
 </h1>
+
+<li *ngFor= "let estado of estados, let i= index"> {{i + 1}} - {{estado.nome}} </li>
