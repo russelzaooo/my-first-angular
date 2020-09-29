@@ -1,5 +1,10 @@
-<h1>
-    {{myName}}
-</h1>
+<div class="container">
 
-<li *ngFor= "let estado of estados, let i= index"> {{i + 1}} - {{estado.nome}} </li>
+  <h1>{{ myName }}</h1>
+  <div class="header"> Estados do Brasil: </div>
+
+  <li *ngFor= "let estado of estados; let i= index">
+    {{ i + 1 }} - {{ estado.nome }}
+  </li>
+
+</div>

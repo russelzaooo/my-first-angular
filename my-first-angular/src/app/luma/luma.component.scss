@@ -1,7 +1,53 @@
-h1
+$par: rgb(40, 204, 216);
+$impar: rgb(221, 221, 221);
+
+.container 
 {
+  padding: 32px;
+  h1 
+  {
     color: rgb(240, 184, 135);
+    background: transparent;
     text-align: center;
     border: 1px solid black;
     border-collapse: collapse;
+  }
+  li 
+  {
+    list-style-type: none; //some os bullets
+    padding: 16px;
+    &:nth-child(even) {
+      background: $par;
+    }
+    &:nth-child(odd) {
+      background: $impar;
+    }
+    &:hover
+    {
+        opacity: 0.6;
+        color: black;
+    }
+  }
+  .header 
+  {
+    text-align: center;
+    font-size: 28px;
+    background: transperent;
+    padding: 16px;
+    border: 1px;
+  }
 }
+
+.buttons
+{
+    border-radius: 8px;
+    background: pink;
+    padding: 8px;
+    &:hover
+    {
+        opacity: 0.6;
+    }
+}
+
+//colorir as linhas da tabela >> :nth-child() -- done
+//estilizar os botões --

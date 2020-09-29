@@ -5,39 +5,37 @@ import { MyappService } from '../myapp.service';
 ({
   selector: 'app-luma',
   templateUrl: './luma.component.html',
-  styleUrls: ['./luma.component.scss']
+  styleUrls: ['./luma.component.scss'],
 })
 export class LumaComponent implements OnInit 
 {
-  estados: any = this.getEstados();
-  myName= "Luma Chen";
+  estados: any;
+  myName= 'Luma Chen';
   http: any;
+  ordenacao: string= 'nome';
 
   constructor(private myappService: MyappService) 
   {
+    this.getEstados();
   }
 
-  ngOnInit(): void //executa quando abre o componente
-  {
-    for (let i= 0; i < this.estados.length; i++)
+  ngOnInit(): void { //executa quando abre o componente
+    for (let i = 0; i < this.estados.length; i++) 
     {
-      let estado= this.estados[i];
+      let estado = this.estados[i];
     }
   }
-  
-  getEstados ()
+
+  getEstados() 
   {
-    this.myappService.getEstadosRequest().subscribe 
-    (
-      sucesso =>
-      {
-        this.estados= sucesso;
-        console.log (this.estados);
+    this.myappService.getEstadosRequest().subscribe(
+      (sucesso) => {
+        this.estados = sucesso;
+        console.log(this.estados);
       },
-      erro =>
-      {
-       console.log(erro);
+      (erro) => {
+        console.log(erro);
       }
-    ) 
+    );
   }
 }
